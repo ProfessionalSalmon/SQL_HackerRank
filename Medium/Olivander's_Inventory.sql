@@ -23,6 +23,7 @@ FROM
     Wands w
     JOIN t1 ON w.code = t1.code
     AND w.coins_needed = min_coins_needed
+    AND w.power = t1.power
 ORDER BY
     t1.power DESC,
     age DESC;
