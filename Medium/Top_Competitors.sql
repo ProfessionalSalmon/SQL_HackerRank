@@ -26,4 +26,4 @@ HAVING
     COUNT(*) > 1
 ORDER BY
     COUNT(*) DESC,
-    hacker_id
+    hacker_id;

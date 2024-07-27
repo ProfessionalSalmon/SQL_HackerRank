@@ -35,4 +35,4 @@ WHERE
     sum_score != 0
 ORDER BY
     sum_score DESC,
-    hacker_id
+    hacker_id;

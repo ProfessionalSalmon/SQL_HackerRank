@@ -25,4 +25,4 @@ HAVING
     SUM(max_score) != 0
 ORDER BY
     SUM(max_score) DESC,
-    hacker_id
+    hacker_id;
