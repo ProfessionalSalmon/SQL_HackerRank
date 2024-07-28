@@ -40,4 +40,4 @@ WHERE --EXCLUSION
     )
 ORDER BY
     t1.challenge_created DESC,
-    t1.hacker_id
+    t1.hacker_id;
