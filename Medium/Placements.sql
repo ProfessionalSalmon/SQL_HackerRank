@@ -17,4 +17,4 @@ FROM
 WHERE
     my_salary < p.salary
 ORDER BY
-    p.Salary
+    p.Salary;
