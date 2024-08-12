@@ -1,4 +1,4 @@
--- Query the Manhattan Distance 
+-- Query the Euclidean Distance
 
 WITH t1 AS (
     SELECT
@@ -10,6 +10,6 @@ WITH t1 AS (
         STATION
 )
 SELECT
-    CAST((ABS(a - c) + ABS(b - d)) AS DECIMAL(10, 4))
+    CAST( SQRT(POWER(a - c, 2) + POWER(b - d,2) ) AS DECIMAL(10, 4) )
 FROM
     t1;

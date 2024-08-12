@@ -1,3 +1,5 @@
+-- Find Median
+
 SELECT
    CAST(AVG(LAT_N) AS DECIMAL(10, 4))
 FROM
@@ -6,13 +8,11 @@ FROM
          LAT_N,
          ROW_NUMBER() OVER (
             ORDER BY
-               LAT_N ASC,
-               id ASC
+               LAT_N
          ) AS row_asc,
          ROW_NUMBER() OVER (
             ORDER BY
-               LAT_N DESC,
-               id DESC
+               LAT_N DESC
          ) AS row_desc
       FROM
          STATION
