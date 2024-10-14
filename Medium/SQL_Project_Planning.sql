@@ -31,21 +31,13 @@ t2 AS (
             FROM
                 Projects
         )
-),
-t3 AS (
-    SELECT
-        Start_Date,
-        End_Date,
-        DATEDIFF(d, Start_Date, End_Date) AS date_diff
-    FROM
-        t1
-        JOIN t2 ON rank_start = rank_end
 )
 SELECT
     Start_Date,
     End_Date
 FROM
-    t3
+    t1
+    JOIN t2 ON rank_start = rank_end
 ORDER BY
-    date_diff,
+    DATEDIFF(day, Start_Date, End_Date),
     Start_Date;
