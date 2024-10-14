@@ -1,17 +1,19 @@
 SELECT
-    CONCAT(Name, "(", LEFT(Occupation, 1), ")")
+    CONCAT(Name, '(', SUBSTRING(Occupation, 1, 1), ')') AS output
 FROM
     OCCUPATIONS
 UNION
 SELECT
     CONCAT(
-        "There are a total of ",
+        'There are a total of ',
         COUNT(*),
-        " ",
+        ' ',
         LOWER(Occupation),
-        "s."
-    )
+        's.'
+    ) AS output
 FROM
     OCCUPATIONS
 GROUP BY
-    Occupation;
+    Occupation
+ORDER BY
+    output;
