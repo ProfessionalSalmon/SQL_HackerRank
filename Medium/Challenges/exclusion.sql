@@ -1,5 +1,3 @@
--- WHERE EXCLUSION
-
 WITH t1 AS (
     SELECT
         c.hacker_id,
